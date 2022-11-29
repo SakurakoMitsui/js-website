@@ -58,8 +58,13 @@
 
         let first = nul;
         let second = null;
+        let timer = null;
 
         function click(e){
+            if(timer){
+                clearTimeout(timer);
+                judge();
+            }
             let elm = e.target
             elm. innerHTML = cards[ elm. index ];
             if( !first ){
@@ -70,7 +75,13 @@
             }
             else{
                 second = elm;
-                if(first. innerHTML == second. innerHTML ){
+                timer = setTimeout( judge , 1000);
+            }
+
+        }
+
+        function judge(){
+            if(first. innerHTML == second. innerHTML ){
                     first.style.visibilty= "hidden";
                     second.style.visibility= "hidden";
                 }
@@ -80,8 +91,7 @@
                 }
                 first = null;
                 second = null;
-            }
-
+                timer = null;
         }
 
 
