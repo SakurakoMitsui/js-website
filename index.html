@@ -24,10 +24,6 @@
 <body>
 
     <div id="field">
-        <div class="card">A</div>
-        <div class="card">2</div>
-        <div class="card">3</div>
-        <div class="card">4</div>
     </div>
 
     <script>
@@ -54,12 +50,19 @@
            let elm = document. createElement("div");
 
            elm.className = "card";
-           elm.innerHTML = cards[i];
+           elm.innerHTML = "";//cards[i];
            elm.index = i;
+           elm.onclick = click 
            field.appendChild(elm);
+        }
+
+        function click(e){
+            let elm = e.target
+            elm.innerHTML = cards[ elm.index ];
         }
 
 
     </script>
+
 </body>
 </html>
