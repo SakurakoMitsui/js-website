@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>神経衰弱</title>
@@ -56,9 +56,32 @@
            field.appendChild(elm);
         }
 
+        let first = nul;
+        let second = null;
+
         function click(e){
             let elm = e.target
-            elm.innerHTML = cards[ elm.index ];
+            elm. innerHTML = cards[ elm. index ];
+            if( !first ){
+                first = elm;
+            }
+            else if(first. index == elm.index ){
+                return;
+            }
+            else{
+                second = elm;
+                if(first. innerHTML == second. innerHTML ){
+                    first.style.visibilty= "hidden";
+                    second.style.visibility= "hidden";
+                }
+                else{
+                    first.innerHTML = "";
+                    second.innerHTML = "";
+                }
+                first = null;
+                second = null;
+            }
+
         }
 
 
