@@ -5,6 +5,7 @@
 <title>神経衰弱</title>
 
 <style>
+    #clock{ font-size:30px;}
     #field{ width: 600px;}
     card {
         width:70px;
@@ -22,7 +23,7 @@
 
 </head>
 <body>
-
+    <div id="clock">経過時間</div>
     <div id="field">
     </div>
 
@@ -59,6 +60,12 @@
         let first = nul;
         let second = null;
         let timer = null;
+        let count = 0
+        let mekuri = 0;
+        let clock = documenr.getElementByld("clock");
+        let timer2 = setInerval(fiunction(){
+            clock.innerText = "経過時間:"+(++count);
+        }, 1000);
 
         function click(e){
             if(timer){
@@ -84,17 +91,18 @@
             if(first. innerHTML == second. innerHTML ){
                     first.style.visibilty= "hidden";
                     second.style.visibility= "hidden";
+                    mekuri += 2;
+                    if(mekuri == cards.lenfth) clearInterval(timer2)
                 }
                 else{
                     first.innerHTML = "";
                     second.innerHTML = "";
+                    count += 5;
                 }
                 first = null;
                 second = null;
                 timer = null;
         }
-
-
     </script>
 
 </body>
