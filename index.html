@@ -1,50 +1,48 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  
-  <meta name="theme-color" content="#fafafa">
-</head>
+    <!--bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-<body>
-  
-  <div class="container">
+    <!--my CSS-->
+    <link rel="stylesheet" href="mystyle.css">
+
+    <!--bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
-    <div class="jumbotron mt-5">
-      <div class="d-flex justify-content-center">
-        <div id="js-question" class="alert alert-primary" role="alert">
-          A simple primary alert—check it out!
-        </div>
-      </div>
-      
-      <div id="js-items" class="d-flex justify-content-center">
-        <div class="m-2">
-          <button type="button" id="js-btn-1" class="btn btn-primary">Primary</button>
-        </div>
-        <div class="m-2">
-          <button type="button" id="js-btn-2" class="btn btn-primary">Primary</button>
-        </div>
-        <div class="m-2">
-          <button type="button" id="js-btn-3" class="btn btn-primary">Primary</button>
-        </div>
-        <div class="m-2">
-          <button type="button" id="js-btn-4" class="btn btn-primary">Primary</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <script src="app.js"></script>
-</body>
+    <title>game</title>
 
+    <style>
+        p {
+            background-color:antiquewhite;
+        }
+    </style>
+
+    <script>
+        function hello()
+        {
+            var message = prompt("what do you want to say?")
+            document.getElementById("demo").innerHTML = message;
+            document.getElementById("heading").style = "background-color:red"
+        }
+
+        function dosomething(){
+          document.getElementById("textfield").value
+          if (name == "quiz"){
+            document.getElementById("demo").innerHTML = "click the button to do" + name;
+          }
+          else{
+            document.getElementById("demo").innerHTML = "you're not able to do" + name;
+          }
+        }
+    </script>
+</head>
+<body>
+    <p>Name:<input id="textfield" type="text"><a href="#" id="doit" onclick = "dosomething();">Greet</a></p>
+    <h1 id = "heading" style="background-color:rgb(223, 223, 228)">This is a heading</h1>
+    <p id="demo">This is a paragraph. </p>
+    <p>Click <a href="quiz.html" onclick="hello();">here</a></p>
+   
+
+</body>
 </html>
