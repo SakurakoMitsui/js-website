@@ -1,3 +1,4 @@
+console.log
 const quiz = [
   {
     question: 'log10 = ?',
@@ -36,14 +37,15 @@ let score =0;
 const $button =document.getElementsByTagName('button');
 const buttonLength = $button.length;
 //クイズの問題文、選択肢を定義
-const setupQuiz = () => {
-  document.getElementsById('js-question').textContent = quiz[quizIndex].question;
+var setupQuiz = () => {
+  document.getElementsById('js-question').textContent = question;
   let buttonIndex = 0;
   while(buttonIndex < buttonLength){
   $button[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
   buttonIndex++;
   }
 }
+
 setupQuiz();
 
 const clickHandler = (e) => {
