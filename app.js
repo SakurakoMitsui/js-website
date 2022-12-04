@@ -37,8 +37,8 @@ let score =0;
 const $button =document.getElementsByTagName('button');
 const buttonLength = $button.length;
 //クイズの問題文、選択肢を定義
-var setupQuiz = () => {
-  document.getElementsById('js-question').textContent = question;
+const setupQuiz = () => {
+  document.getElementById('js-question').textContent = quiz[quizIndex].question;
   let buttonIndex = 0;
   while(buttonIndex < buttonLength){
   $button[buttonIndex].textContent = quiz[quizIndex].answers[buttonIndex];
