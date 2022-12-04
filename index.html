@@ -14,34 +14,34 @@
 
     <style>
         p {
-            background-color:antiquewhite;
+            background-color:rgb(241, 233, 226);
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
     </style>
 
     <script>
         function hello()
         {
-            var message = prompt("what do you want to say?")
-            document.getElementById("demo").innerHTML = message;
-            document.getElementById("heading").style = "background-color:red"
-        }
+           var textbox = document.getElementById("demo");
+           var heading = document.getElementById('heading');
 
-        function dosomething(){
-          document.getElementById("textfield").value
-          if (name == "quiz"){
-            document.getElementById("demo").innerHTML = "click the button to do" + name;
-          }
-          else{
-            document.getElementById("demo").innerHTML = "you're not able to do" + name;
-          }
+           if (textbox.value == quiz){
+             heading.innerHTML = 'Click the button and do the' + textbox.value
+           } else{
+             heading.innerHTML = 'write 「quiz」'
+           }
+
+           heading.style = "background-color:red";
+           
+
         }
     </script>
 </head>
 <body>
-    <p>Name:<input id="textfield" type="text"><a href="#" id="doit" onclick = "dosomething();">Greet</a></p>
+    <p>Name:<input id="textfield" type="text"><a href="#" id="doit" onclick = "dosomething();">Go</a></p>
     <h1 id = "heading" style="background-color:rgb(223, 223, 228)">This is a heading</h1>
     <p id="demo">This is a paragraph. </p>
-    <p>Click <a href="quiz.html" onclick="hello();">here</a></p>
+    <p>Click <a href="quiz.html" onclick="hello();">here to do quiz</a></p>
    
 
 </body>
