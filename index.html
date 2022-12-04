@@ -24,24 +24,20 @@
         {
            var textbox = document.getElementById("demo");
            var heading = document.getElementById('heading');
-
            if (textbox.value == quiz){
              heading.innerHTML = 'Click the button and do the' + textbox.value
            } else{
-             heading.innerHTML = 'write 「quiz」'
+             heading.innerHTML = 'Enter 「quiz」'
            }
-
-           heading.style = "background-color:red";
-           
-
-        }
+           heading.style = "background-color:gray";
+        };
     </script>
 </head>
 <body>
-    <p>Name:<input id="textfield" type="text"><a href="#" id="doit" onclick = "dosomething();">Go</a></p>
-    <h1 id = "heading" style="background-color:rgb(223, 223, 228)">This is a heading</h1>
+    <p>Name:<input id="textfield" type="text"><a href="#" id="doit" onclick = "hello();">here</a></p>
+    <h1 id = "heading" style="background-color:rgb(121, 121, 236)">This is a heading</h1>
     <p id="demo">This is a paragraph. </p>
-    <p>Click <a href="quiz.html" onclick="hello();">here to do quiz</a></p>
+    <p>Click <a href="quiz.html";">here</a></p>
    
 
 </body>
