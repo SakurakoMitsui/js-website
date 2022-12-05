@@ -45,7 +45,6 @@ const setupQuiz = () => {
   buttonIndex++;
   }
 }
-
 setupQuiz();
 
 const clickHandler = (e) => {
@@ -64,6 +63,7 @@ const clickHandler = (e) => {
   }
 }
 
+clickHandler(e);
 
 //ボタンをクリックしたら正誤判定する
 let handlerIndex = 0;
